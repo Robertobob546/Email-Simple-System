@@ -1,4 +1,3 @@
-
 class Inbox:
     def __init__(self):
         self.emails = []
