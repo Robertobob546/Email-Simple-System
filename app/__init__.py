@@ -1,0 +1,1 @@
+"""Simple email system package."""

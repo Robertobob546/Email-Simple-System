@@ -21,6 +21,23 @@ This project was developed as a practice exercise to reinforce Python fundamenta
 - Python 3
 - `datetime` module
 
+## Running the project
+
+From the project folder in PowerShell, use the existing virtual environment:
+
+```powershell
+.\.venv\Scripts\python.exe app/main.py
+```
+
+You can also run the application as a module:
+
+```powershell
+.\.venv\Scripts\python.exe -m app.main
+```
+
+No additional dependencies are required. The application runs a demonstration
+of sending, reading, and deleting messages between two users.
+
 ## Object-Oriented Programming Concepts
 
 This project uses three main classes:
@@ -90,3 +107,4 @@ ramy.send_email(
 ramy.check_inbox()
 ramy.read_email(1)
 ramy.delete_email(1)
+```
