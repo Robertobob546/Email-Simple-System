@@ -58,3 +58,22 @@ def test_user_check_inbox_returns_emails():
 
     assert len(emails) == 1
     assert emails[0] == email
+
+
+def test_user_name_must_be_string():
+    with pytest.raises(TypeError, match="Name must be a string."):
+        User(123)  # Non-string name
+
+def test_user_name_cannot_be_empty():
+    with pytest.raises(ValueError, match="Name cannot be empty."):
+        User("")  # Empty name
+
+def test_send_email_receiver_must_be_user():
+    sender = User("Alice")
+
+    with pytest.raises(TypeError, match=r"Receiver must be a User\."):
+        sender.send_email(
+            "Bob",
+            "Test Subject",
+            "Test Body"
+        )
